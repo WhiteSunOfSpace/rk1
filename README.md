@@ -1,19 +1,22 @@
-#first control work
+# first control work
 
-#analysis of github sourse
-
-1.  git clone https://github.com/facebook/folly
-    find . -type f | wc -l
+## short description of the main task
+ ```shell
+ analysis of github sourse
+ ```
+## tasks, their code and output
+1.  $ git clone https://github.com/facebook/folly
+    $ find . -type f | wc -l
     ```shell
     2281
     ```
 
-2.  find . -type f -exec du -h {} + >'/home/vboxuser/WhiteSunOfSpace/workspace/rk/3.txt'
+2.  $ find . -type f -exec du -h {} + >'/home/vboxuser/WhiteSunOfSpace/workspace/rk/3.txt'
     ```shell
     answer is in the file 3.txt in repository
     ```
 
-3.  cloc /home/vboxuser/WhiteSunOfSpace/workspace/folly
+3.  $ cloc /home/vboxuser/WhiteSunOfSpace/workspace/folly
     ```shell
     2251 text files.
     2249 unique files.                                          
@@ -45,39 +48,39 @@
     -----------------------------------------------------------------------------------
     ```
 
-4.  find . -type f -name "*.clang-format" | wc -l
+4.  $ find . -type f -name "*.clang-format" | wc -l
     ```shell
      2
     ```
 
-5.  [ ! -d "/src/" ] && echo "no such directory"
+5.  $ [ ! -d "/src/" ] && echo "no such directory"
     ```shell
     no such directory
     ```
 
-6.  find . -type f  -iname "*socket*" | wc -l
+6.  $ find . -type f  -iname "*socket*" | wc -l
     ```shell
     73
     ```
 
-7.  find . -type f  -iname "*select*" | wc -l
+7.  $ find . -type f  -iname "*select*" | wc -l
     ```shell
     3
     ```
 
-8.  find /home/vboxuser/WhiteSunOfSpace/workspace/folly -type f -exec grep -iEo 'microsoft|google|intel' {} + | wc -l
+8.  $ find /home/vboxuser/WhiteSunOfSpace/workspace/folly -type f -exec grep -iEo 'microsoft|google|intel' {} + | wc -l
     ```shell
     grep: /home/vboxuser/WhiteSunOfSpace/workspace/folly/.git/index: binary file matches
     319
     ```
 
-9.  find $(pwd) -name "LICENSE*"
+9.  $ find $(pwd) -name "LICENSE*"
     ```shell
     /home/vboxuser/WhiteSunOfSpace/workspace/folly/build/fbcode_builder/LICENSE
     /home/vboxuser/WhiteSunOfSpace/workspace/folly/LICENSE
     ```
 
-10. grep -iE 'BSD|GNU|MIT|APSL|Apache|GPL|AGPL|LGPL' /home/vboxuser/WhiteSunOfSpace/workspace/folly/LI
+10. $ grep -iE 'BSD|GNU|MIT|APSL|Apache|GPL|AGPL|LGPL' /home/vboxuser/WhiteSunOfSpace/workspace/folly/LI
     ```shell
                                 Apache License
                         http://www.apache.org/licenses/

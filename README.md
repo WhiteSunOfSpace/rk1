@@ -10,7 +10,7 @@
 
 2.  find . -type f -exec du -h {} + >'/home/vboxuser/WhiteSunOfSpace/workspace/rk/3.txt'
     ```shell
-    answer is in the file 
+    answer is in the file 3.txt in repository
     ```
 
 3.  cloc /home/vboxuser/WhiteSunOfSpace/workspace/folly

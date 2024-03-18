@@ -5,19 +5,22 @@
  analysis of github sourse
  ```
 ## tasks, their code and output
-1.  $ git clone https://github.com/facebook/folly
-    $ find . -type f | wc -l
+1.  Количество файлов
     ```shell
+    $ git clone https://github.com/facebook/folly
+    $ find . -type f | wc -l
     2281
     ```
 
-2.  $ find . -type f -exec du -h {} + >'/home/vboxuser/WhiteSunOfSpace/workspace/rk/3.txt'
+2.  Объем всех файлов
     ```shell
+    $ find . -type f -exec du -h {} + >'/home/vboxuser/WhiteSunOfSpace/workspace/rk/3.txt'
     answer is in the file 3.txt in repository
     ```
 
-3.  $ cloc /home/vboxuser/WhiteSunOfSpace/workspace/folly
+3.  Объем исходного кода: cpp, c, h, hpp, cxx, py, pl, php, java, cs, rb, rs, hs
     ```shell
+    $ cloc /home/vboxuser/WhiteSunOfSpace/workspace/folly
     2251 text files.
     2249 unique files.                                          
     105 files ignored.
@@ -48,40 +51,47 @@
     -----------------------------------------------------------------------------------
     ```
 
-4.  $ find . -type f -name "*.clang-format" | wc -l
+4.  Найти, если есть файл .clang-format
     ```shell
+    $ find . -type f -name "*.clang-format" | wc -l
      2
     ```
 
-5.  $ [ ! -d "/src/" ] && echo "no such directory"
+5.  Если есть каталог src, то общее количество файлов в каталоге src
     ```shell
+    $ [ ! -d "/src/" ] && echo "no such directory"
     no such directory
     ```
 
-6.  $ find . -type f  -iname "*socket*" | wc -l
+6.  Выписать количество файлов, содержащих слово socket независимо от написания строчными или прописными буквами во всех файлах репозитория.
     ```shell
+    $ find . -type f  -iname "*socket*" | wc -l
     73
     ```
 
-7.  $ find . -type f  -iname "*select*" | wc -l
+7.  Выписать количество файлов, содержащих слово select независимо от написания строчными или прописными буквами во всех файлах репозитория.
     ```shell
+    $ find . -type f  -iname "*select*" | wc -l
     3
     ```
 
-8.  $ find /home/vboxuser/WhiteSunOfSpace/workspace/folly -type f -exec grep -iEo 'microsoft|google|intel' {} + | wc -l
+8.  Выписать количество раз, сколько, содержится слово Microsoft, Google или Intel независимо от написания строчными или прописными буквами во всех файлах репозитория.
     ```shell
+    $ find /home/vboxuser/WhiteSunOfSpace/workspace/folly -type f -exec grep -iEo 'microsoft|google|intel' {} + | wc -l
     grep: /home/vboxuser/WhiteSunOfSpace/workspace/folly/.git/index: binary file matches
     319
     ```
 
-9.  $ find $(pwd) -name "LICENSE*"
+9.  Найти расположение файла LICENSE относительно начала репозитория.
     ```shell
+    $ find $(pwd) -name "LICENSE*"
     /home/vboxuser/WhiteSunOfSpace/workspace/folly/build/fbcode_builder/LICENSE
     /home/vboxuser/WhiteSunOfSpace/workspace/folly/LICENSE
     ```
 
-10. $ grep -iE 'BSD|GNU|MIT|APSL|Apache|GPL|AGPL|LGPL' /home/vboxuser/WhiteSunOfSpace/workspace/folly/LI
+10. Вывести строку для файла LICENSE (если он есть), содержащую следующие подпоследовательности символов: BSD, GNU, MIT, APSL, Apache, GPL, AGPL, LGPL
     ```shell
+    $ grep -iE 'BSD|GNU|MIT|APSL|Apache|GPL|AGPL|LGPL' /home/vboxuser/WhiteSunOfSpace/workspace/folly/LI
                                 Apache License
                         http://www.apache.org/licenses/
       including but not limited to software source code, documentation
